@@ -1,0 +1,30 @@
+package executor;
+
+import java.util.Iterator;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
+
+public class ExecutorDemo {
+	
+	private static final Logger logger = Logger.getLogger(ExecutorDemo.class.getName());
+
+	public static void main(String[] args) {
+		
+		Callable<String> callable = new Callable<String>() {
+
+			@Override
+			public String call() throws Exception {
+				return "Hello from " + Thread.currentThread().getName();
+			}
+			
+		}
+		ExecutorService executorService = Executors.newFixedThreadPool(5);
+		executorService.execute(new Callable<V>() {
+		});
+		
+	}
+}

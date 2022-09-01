@@ -1,0 +1,30 @@
+package notes;
+
+import com.threads.threads.ThreadsApplication.OrderProcessor;
+
+public enum CaseTwo {
+	
+//	private static class OrderProcessor extends Thread{
+//		@Override
+//		public void run() {
+//			printFive();
+//		}
+//		
+//		
+//	}
+//	public static void main(String[] args) {
+//		//printFive();
+//		
+//		Thread t1 = new OrderProcessor();
+//		t1.start();
+//	}
+//	
+//	private static void printFive() {
+//		for(int i = 0; i<5; i++ ) {
+//			System.out.println("Count" + i + ", Thread: " + Thread.currentThread().getName());
+//		}
+//	}
+//	
+//	Yukarıda run ettiğimiz de artık main threadden değil de thread-0 üzerinden calıstırdı.
+
+}

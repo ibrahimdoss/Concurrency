@@ -1,0 +1,19 @@
+package executor;
+
+import java.util.Iterator;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
+
+public class ExecutorDemo {
+	
+	private static final Logger logger = Logger.getLogger(ExecutorDemo.class.getName());
+
+	public static void main(String[] args) {
+		
+		ExecutorService executorService = Executors.newFixedThreadPool(5);
+		
+	}
+}

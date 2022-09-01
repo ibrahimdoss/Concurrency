@@ -1,0 +1,6 @@
+package notes;
+
+public enum CaseCounter {
+
+	Verinin bozulmasıyla alakalı örnek.
+}

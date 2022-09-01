@@ -1,0 +1,15 @@
+package com.threads.threads;
+
+public class PubSub extends Thread{
+	
+	boolean notified = false;
+
+	@Override
+	public void run() {
+		while(!notified) {
+			
+		}
+		System.out.println("Message received");
+	}
+
+}

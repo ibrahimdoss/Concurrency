@@ -1,0 +1,21 @@
+package com.threads.threads;
+
+public class PubSub extends Thread{
+	
+	boolean notified = false;
+
+	@Override
+	public void run() {
+		while(!notified) {
+			
+		}
+		System.out.println("Message received");
+	}
+	
+	public static void main(String[] args) {
+		PubSub pubSub = new PubSub();
+		pubSub.start();
+		Thread.sleep();
+	}
+
+}

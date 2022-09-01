@@ -1,0 +1,32 @@
+package com.threads.threads;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ThreadsApplication {
+	
+	
+	private static class OrderProcessor extends Thread{
+		@Override
+		public void run() {
+			printFive();
+		}
+		
+		
+	}
+	public static void main(String[] args) {
+		//printFive();
+		
+		Thread t1 = new OrderProcessor();
+		Thread t2 = new OrderProcessor();
+		t1.start();
+		t2.start();
+	}
+	
+	private static void printFive() {
+		for(int i = 0; i<5; i++ ) {
+			System.out.println("Count" + i + ", Thread: " + Thread.currentThread().getName());
+		}
+	}
+}

@@ -1,0 +1,39 @@
+package notes;
+
+import com.threads.threads.PubSub;
+
+public enum PubSubCaseOne {
+	
+	Burada sleep is over diyor orada kalıyor ama heap'e ne zaman yazacak onu bilmiyoruz. 
+	Dolayısıyla sleepi görüp notified true olup while icindeki mesajı yazması lazımdı.
+	Buradaki sorunu ve case'n temel mantığı volatile kullanım noktasını görmek icin.
+	Buradaki sorunu da volatile kullanarak cözeriz.
+	
+	
+	
+	Join de islemin bitmesini bekliyoruz.
+
+	
+	public class PubSub extends Thread{
+		
+		boolean notified = false;
+
+		@Override
+		public void run() {
+			while(!notified) {
+				
+			}
+			System.out.println("Message received");
+		}
+		
+		public static void main(String[] args) throws InterruptedException{
+			PubSub pubSub = new PubSub();
+			pubSub.start();
+			Thread.sleep(1000);
+			System.out.println("Sleep is over");
+			pubSub.notified = true;
+			pubSub.join();
+			System.out.println("Pubsub is terminated");
+		}
+
+}

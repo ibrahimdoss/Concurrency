@@ -1,0 +1,12 @@
+package executor;
+
+public enum caseOne {
+	
+//	Thread t1 = new Thread(()->{
+//		System.out.println("Hello from" + Thread.currentThread().getName());
+//	});
+//	
+//	t1.start();
+	
+	//normal baslangıc main thread olusumu.
+}

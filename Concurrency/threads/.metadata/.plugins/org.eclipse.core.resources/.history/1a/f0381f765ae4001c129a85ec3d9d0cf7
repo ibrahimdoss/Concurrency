@@ -1,0 +1,12 @@
+package com.threads.threads;
+
+public class PubSub extends Thread{
+	
+	@Override
+	public void run() {
+		
+	boolean notified = false;
+		while()
+	}
+
+}

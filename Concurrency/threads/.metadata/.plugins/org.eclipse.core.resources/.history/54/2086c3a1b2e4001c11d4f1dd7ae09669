@@ -1,0 +1,37 @@
+package notes;
+
+import com.threads.threads.Counter;
+
+public enum CaseCounter {
+
+	//Verinin bozulmasıyla alakalı örnek.
+//	Burada thread1 arttırırken thread2 de arttırıyor ve dolayısıyla ikisi de farklı değerler üretiyor
+//	Çünkü thread1 arttırırken veriyi heapte güncellemiyor dolayısıyla thread2 de eski veriyle 
+//	arttırma islemine girmis oluyor ve veri bozulmus oluyor.
+//	
+//	Counter counter = new Counter();
+//	
+//	Thread t1 = new Thread(() ->{
+//		for (int i = 0; i < 100_000; i++) {
+//			counter.increment();
+//		}
+//		System.out.println("Count is " + counter.getCount() + 
+//				", Thread is"+ Thread.currentThread().getName());
+//	});
+//	
+//	Thread t2 = new Thread(() ->{
+//		for (int i = 0; i < 100_000; i++) {
+//			counter.increment();
+//		}
+//		System.out.println("Count is " + counter.getCount() + 
+//				", Thread is"+ Thread.currentThread().getName());
+//	});
+//	
+//	t1.start();
+//	t2.start();
+//}
+//result 
+//Count is 101371, Thread isThread-1
+//Count is 145866, Thread isThread-0
+
+}
